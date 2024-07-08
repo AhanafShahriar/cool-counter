@@ -27,11 +27,16 @@ body {
   align-items: center;
 }
 
+.counter-limit {
+  background-color: #32388f;
+}
+
 .counter__title {
   font-size: 40px;
   opacity: 0.4;
   margin-top: 50px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .counter__value {
@@ -53,16 +58,16 @@ body {
   height: 100px;
   width: 100%;
   display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: auto;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 .counter__btn {
-  color: #3e46b4;
-  font-size: 35px;
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 .counter__btn:hover {
   background-color: rgb(22, 21, 21);
@@ -70,18 +75,28 @@ body {
 
 .counter__btn-plus {
   border-right: #3e46b4 1px solid;
-  border-bottom-left-radius: 10px;
+}
+.counter__btn-minus {
+}
+.counter__icon {
+  font-size: 35px;
+  color: #3e46b4;
 }
 
-@media (max-width: 600px) or (max-height: 700px) {
+@media (max-width: 700px) or (max-height: 700px) {
   .counter {
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     border-radius: 0;
+  }
+  .counter__title {
+    margin-top: 100px;
   }
   .counter__value {
-    margin-top: 18 0px;
+    margin-top: 120px;
   }
   .counter__btns {
-    border-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
