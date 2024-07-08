@@ -17,7 +17,6 @@ function incrementVal() {
     minusBtn.disabled = true;
   }
   counterValEl.textContent = newVal;
-  plusBtn.blur();
 }
 
 plusBtn.addEventListener("click", incrementVal);
@@ -27,7 +26,6 @@ minusBtn.addEventListener("click", function () {
   let newVal = currentVal - 1;
   if (newVal < 0) newVal = 0;
   counterValEl.textContent = newVal;
-  minusBtn.blur();
 });
 
 resetBtn.addEventListener("click", function () {
@@ -36,7 +34,4 @@ resetBtn.addEventListener("click", function () {
   counterTitleEl.textContent = "cool counter";
   plusBtn.disabled = false;
   minusBtn.disabled = false;
-  plusBtn.blur();
-  minusBtn.blur();
 });
-document.addEventListener("keydown", incrementVal);
